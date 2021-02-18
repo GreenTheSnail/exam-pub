@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Adding</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div th:insert="blocks/header :: header"></div>
+<div class="container mt-5 mb-5">
+    <h1>New drink</h1>
+    <form action="/drinks/add" method="post">
+        <h6>Name:</h6>
+        <input type="text" name="productName" placeholder="Enter product name" class="form-control">
+        <h6>Price:</h6>
+        <input type="text" name="price" placeholder="Enter product price" class="form-control">
+        <h6>Is for adult:</h6>
+        <input type="checkbox" name="isForAdult"  class="form-check-label"<h6> Yes</h6><br><br>
+        <button type="submit" class="btn btn-primary">Add a drink</button>
+    </form>
+</div>
+<div th:insert="blocks/footer :: footer"></div>
+</body>
+</html>

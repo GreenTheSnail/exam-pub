@@ -46,4 +46,13 @@ public class Drink {
     public void setForAdult(boolean forAdult) {
         isForAdult = forAdult;
     }
+
+    public Drink() {
+    }
+
+    public Drink(String productName, int price, boolean isForAdult) {
+        this.productName = productName;
+        Price = price;
+        this.isForAdult = isForAdult;
+    }
 }
