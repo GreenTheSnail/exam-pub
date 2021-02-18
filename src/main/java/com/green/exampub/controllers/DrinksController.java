@@ -71,4 +71,10 @@ public class DrinksController {
         drinkRepository.save(drink);
         return "redirect:/drinks";
     }
+    @PostMapping("/drinks/{id}/remove")
+    public String drinksDrinkDelete(@PathVariable(value = "id") long drinkId, Model model) {
+        Drink drink = drinkRepository.findById(drinkId).orElseThrow();
+        drinkRepository.delete(drink);
+        return "redirect:/drinks";
+    }
 }

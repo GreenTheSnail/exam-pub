@@ -12,9 +12,11 @@
         <h5><span th:text="${el.id}"></span>. <span th:text="${el.productName}"></span></h5>
         <h6>Price is: <span th:text="${el.price}"></span>$</h6>
         <h6>Is for adults: <span th:text="${el.forAdult}"></span></h6>
-        <a th:href="'/drinks/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a>
-        <a th:href="'/drinks/' + ${el.id} + 'remove'" class="btn btn-warning">Delete</a>
-        <br>
+        <a th:href="'/drinks/' + ${el.id} + '/edit'" class="btn btn-warning">Edit</a><br>
+        <form th:action="'/drinks/' + ${el.id} + '/remove'" method="post">
+            <button class="btn btn-warning" type="submit">Delete</button>
+        </form>
+
         <a th:href="'/drinks'">Back to menu</a>
     </div>
 
